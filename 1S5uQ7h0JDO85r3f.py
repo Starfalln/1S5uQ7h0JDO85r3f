@@ -1,0 +1,17 @@
+import requests,sys,hashlib,os,zipfile
+r=""
+os.mkdir("t")
+for q in range(10000,100000):
+    w=requests.get(true_res)
+    if (w.status_code==404 or w.status_code==503):
+        continue
+    e=hashlib.md5(w.content).hexdigest()
+    r=r+str(q)+","+e+"\n"
+    with open("./t/"str(q)+".png","wb") as code:
+            code.write(w.content)
+zip=zipfile.ZipFile(y,'w',zipfile.ZIP_DEFLATED)
+for path, dirnames, filenames in os.walk("./t/"):
+    fpath = path.replace("./t/", '')
+    for filename in filenames:
+        zip.write(os.path.join(path, filename), os.path.join(fpath, filename))
+zip.close()
