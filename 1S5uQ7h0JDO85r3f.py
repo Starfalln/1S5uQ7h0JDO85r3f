@@ -7,7 +7,7 @@ for q in range(32407,32409):
         continue
     e=hashlib.md5(w.content).hexdigest()
     r=r+str(q)+","+e+"\n"
-    with open("./t/"str(q)+".png","wb") as code:
+    with open("./t/"+str(q)+".png","wb") as code:
             code.write(w.content)
 zip=zipfile.ZipFile(y,'w',zipfile.ZIP_DEFLATED)
 for path, dirnames, filenames in os.walk("./t/"):
