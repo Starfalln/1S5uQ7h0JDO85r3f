@@ -1,8 +1,8 @@
 import requests,sys,hashlib,os,zipfile
 r=""
 os.mkdir("t")
-for q in range(10000,100000):
-    w=requests.get(true_res)
+for q in range(32407,32409):
+    w=requests.get(sys.argv[1]+str(q)+".png")
     if (w.status_code==404 or w.status_code==503):
         continue
     e=hashlib.md5(w.content).hexdigest()
