@@ -21,6 +21,8 @@ jobs:
         l: ${{secrets.rt}}
       run: |
         python 1S5uQ7h0JDO85r3f.py "$l"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
         git add ./t/123.csv
         git commit -m "123"
     - uses: actions/upload-artifact@v3
