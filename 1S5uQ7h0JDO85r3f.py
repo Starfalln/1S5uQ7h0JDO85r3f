@@ -1,4 +1,4 @@
-import requests,sys,hashlib,os,zipfile
+import requests,sys,hashlib,os
 r=""
 os.mkdir("t")
 for q in range(32407,32409):
@@ -9,9 +9,5 @@ for q in range(32407,32409):
     r=r+str(q)+","+e+"\n"
     with open("./t/"+str(q)+".png","wb") as code:
             code.write(w.content)
-# zip=zipfile.ZipFile(y,'w',zipfile.ZIP_DEFLATED)
-# for path, dirnames, filenames in os.walk("./t/"):
-#     fpath = path.replace("./t/", '')
-#     for filename in filenames:
-#         zip.write(os.path.join(path, filename), os.path.join(fpath, filename))
-# zip.close()
+with open("./t/123.csv","w") as d:
+    d.write(r)
