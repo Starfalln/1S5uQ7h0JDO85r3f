@@ -22,6 +22,7 @@ jobs:
       run: |
         python 1S5uQ7h0JDO85r3f.py "$l"
         git add ./t/123.csv
+        git commit -m "123"
     - uses: actions/upload-artifact@v3
       with:
         name: m
