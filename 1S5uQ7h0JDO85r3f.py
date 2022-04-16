@@ -1,6 +1,6 @@
 import requests,sys,hashlib,os
 r=""
-os.mkdir("t")
+
 for q in range(32407,32409):
     w=requests.get(sys.argv[1]+str(q)+".png", verify=False)
     if (w.status_code==404 or w.status_code==503):
