@@ -9,7 +9,7 @@ for a in range(10000,100000):
 rs = (grequests.get(u,headers=header) for u in us)
 resp = grequests.map(rs, size=200)
 for q in range(10000,100000):
-    if resp[q-10000]==None:
+    if resp[q-10000].status_code==404:
         continue
     e=hashlib.md5(resp[q-10000].content).hexdigest()
     r=r+str(q)+","+e+"\n"
