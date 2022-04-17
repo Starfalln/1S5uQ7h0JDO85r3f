@@ -9,7 +9,7 @@ for a in range(10000,100000):
 for o in u:
     req = grequests.request("get", url=o, headers=header)
     task.append(req)
-resp = grequests.map(task, size=1000)
+resp = grequests.map(task, size=200)
 for q in range(10000,100000):
     if resp[q-10000]==None:
         continue
