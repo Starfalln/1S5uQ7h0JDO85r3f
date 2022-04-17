@@ -3,3 +3,4 @@ cryptography
 pyOpenSSL
 certifi
 requests_toolbelt
+grequests
