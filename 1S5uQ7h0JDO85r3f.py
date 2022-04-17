@@ -1,4 +1,5 @@
-import requests,sys,hashlib,os
+import requests,sys,hashlib,os,urllib3
+urllib3.disable_warnings()
 r=""
 l = requests.session()
 header = {"Origin": "https://jksb.v.zzu.edu.cn","Referer": "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll","User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.17(0x17001126) NetType/WIFI Language/zh_CN","Host": "jksb.v.zzu.edu.cn"}
