@@ -15,5 +15,5 @@ for q in range(10000,100000):
         continue
     e=hashlib.md5(resp[q-10000].content).hexdigest()
     r=r+str(q)+","+e+"\n"
-with open("./t/1234.csv","w") as d:
+with open("./t/123.csv","w") as d:
     d.write(r)
