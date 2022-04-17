@@ -10,10 +10,10 @@ for o in u:
     req = grequests.request("get", url=o, headers=header)
     task.append(req)
 resp = grequests.map(task, size=1000)
-for q in resp:
-    if q.status_code==404:
+for q in range(10000,100000):
+    if resp[q-10000].status_code==404:
         continue
-    e=hashlib.md5(q.content).hexdigest()
+    e=hashlib.md5(resp[q-10000].content).hexdigest()
     r=r+str(q)+","+e+"\n"
 with open("./t/123.csv","w") as d:
     d.write(r)
